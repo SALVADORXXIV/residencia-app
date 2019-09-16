@@ -1,0 +1,163 @@
+
+.almacen{
+  //  background:#808080;
+  background: #FFFFFF;
+}
+.ruta{
+  
+  //  background: #00cc00;
+  background: #FFFFFF;
+   
+}
+.en_camino{
+  //  background: #006600;
+  background: #FFFFFF;
+}
+.entregado{
+    background: #FFFFFF;
+ 
+}
+
+.imagen{
+    width:100%;
+    height: 100%;
+    margin-top:0%;
+    margin-left: 0%;
+}
+
+
+.boton{
+    width: 25%;
+  height:15%;
+ position: relative;
+ left: 6%;
+ border-radius: 200px 200px 200px 200px;
+-moz-border-radius: 200px 200px 200px 200px;
+-webkit-border-radius: 200px 200px 200px 200px;
+border: 10px solid #0000;
+margin-left: 2%;
+margin-right: 2%;
+margin-top: 5%;
+  }
+
+  .img{
+    width: 100%;
+    height: 100%;
+  
+  }
+
+  
+
+
+  //botones
+ .preca{
+   width: 100%;
+ }
+    
+   
+    #socialicons
+    {
+    
+      height: 80%;
+    width:25%;
+    margin:0 auto;
+    overflow:auto;
+  
+    
+    }
+      
+    .socialicon
+    {
+    background: red;
+    width:80%;
+    height:75%;
+    border-radius:50%;
+    overflow:hidden;
+    background:#e4e4e4;
+    position:relative;
+    float:left;
+    
+    margin:10% 0 0 0;
+    } 
+    
+    .socialiconcircle1
+    {
+    width:150%;
+    height:150%;
+    position:absolute;
+    left:0px;
+    top:100px;
+   
+   
+    animation:fill 3s infinite;
+    }
+    
+    .socialiconcircle2
+    {
+    width:94%;
+    height:94%;
+    border-radius:50%;
+    position:absolute;
+    left:3%;
+    top:3%;
+    }
+
+
+    .socialiconcircle23
+    {
+    width:94%;
+    height:94%;
+    border-radius:50%;
+    background:#c4302b;
+    position:absolute;
+    left:3%;
+    top:3%;
+    }
+
+    .socialiconcircle24
+    {
+    width:94%;
+    height:94%;
+    border-radius:50%;
+    background:#40802A;
+    position:absolute;
+    left:3%;
+    top:3%;
+    }
+    
+    .icons
+    {
+    font-size:2em;
+    position:absolute;
+    left: 33px;
+    top: 33px;
+   
+   
+  
+    }
+    
+    /* fill color */  
+    
+    .youtubecolor{background:#0e76a8;}
+    .almacenes {background:#222222;}
+    .linkedincolor{background:#009900;}
+    .en_ruta{background: #003300}
+    .tumblrcolor{background:#c4302b;}
+    
+    /* icons color */  
+   
+   
+    
+    
+    /* fill background */      
+    @-webkit-keyframes fill
+    {
+    0%{top:100px;}
+    100%{top:0px;}
+    }
+    
+   
+    
+  
+
+  

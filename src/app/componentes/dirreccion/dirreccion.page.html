@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar  color="dark">
+      <ion-title color="light">Address</ion-title>
+      <ion-button slot="end" color="dark" (click)="closetmMap()">
+          <ion-icon name="close" color="primary"></ion-icon>
+        </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <div id="socialicons">
+        <div class="socialicon">
+         <div class="linkedincolor socialiconcircle1"></div>
+      <div class="socialiconcircle2">
+       <ion-img class="img" src="assets/icon/014-route.png"></ion-img>
+       </div> 
+       </div>
+       </div>
+       <div class="compania" >
+          <ion-label><h1 align="center"><b>Company</b></h1></ion-label><br/>
+          <ion-label><h2 align="center"><b>{{name}}</b></h2></ion-label><br/>
+       </div>
+       <div class="compania" >
+         <br/>
+          <ion-label><h2 ><b>Address: {{address}}</b></h2></ion-label>
+          <ion-label><h2 ><b>Colony: {{colony}}</b></h2></ion-label>
+          <ion-label><h2 ><b>City: {{city}}</b></h2></ion-label>
+          <ion-label><h2 ><b>State: {{state}}</b></h2></ion-label>
+          <ion-label><h2 ><b>Zipcode: {{zipcode}}</b></h2></ion-label>
+          <br/>
+       </div>
+       <div *ngFor="let direccion of direcciones">
+          <br/>
+          <ion-label><h2 ><b>Name: {{direccion.name}}</b></h2></ion-label>
+          <ion-label><h2 ><b>Name last: {{direccion.last_name}}</b></h2></ion-label>
+          <ion-label><h2 ><b>Mobile: {{direccion.mobile}}</b></h2></ion-label>
+          <ion-label><h2 ><b>Telephone: {{direccion.telephones}}</b></h2></ion-label>
+         
+          <br/>
+       </div>
+
+</ion-content>

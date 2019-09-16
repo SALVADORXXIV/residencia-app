@@ -1,0 +1,75 @@
+<ion-header>
+    <ion-toolbar  color="primary">
+      <ion-title color="light">Delivery</ion-title>
+        <ion-button slot="end" color="primary" (click)="closetmMap()">
+            <ion-icon name="close" color="light"></ion-icon>
+          </ion-button>
+    </ion-toolbar>
+  </ion-header>
+<ion-content padding>
+    <div id="socialicons">
+    <div class="socialicon">
+        <div class="youtubecolor socialiconcircle1"></div>
+         <div class="socialiconcircle2">
+            <ion-img class="img" src="assets/icon/002-package.png"></ion-img>
+    </div> 
+    </div>
+    </div>
+    <div>
+        <ion-label><h1 align="center"><b>Package</b></h1></ion-label>
+     </div>
+   
+     <div class="compania" *ngFor="let paquete of paquetes">
+      
+     
+        <ion-label align="center"><h2 ><b>Name:</b></h2></ion-label>
+        <ion-label align="center"><h2 >{{paquete.name}}</h2></ion-label>
+        <ion-label><h2 align="center"><b>State:</b></h2></ion-label>
+        <ion-label><h2 align="center">{{paquete.state}}</h2></ion-label>
+        <ion-label align="center"><h2 ><b>Descripcion</b></h2></ion-label>
+        <ion-label align="center"><h2 >{{paquete.descripcion}}</h2></ion-label>
+        <br/>
+    
+     <div class="compania"  *ngIf="paquete.problem">
+      
+     
+      <ion-label align="center"><h2 ><b>PACKAGE STATUS</b></h2></ion-label><BR/>
+
+      <ion-label><h2 align="center"><b>Problem:</b></h2></ion-label>
+      <ion-label><h2 align="center">{{paquete.problem}}</h2></ion-label>
+      <ion-label align="center"><h2 ><b>Description of the problem</b></h2></ion-label>
+      <ion-label align="center"><h2 >{{paquete.description_problem}}</h2></ion-label>
+      <br/>
+   </div>
+  </div>
+     <div  class="compania" *ngFor="let direccion of direcciones">
+       <ion-label  align="center"><h2><b>Dealer Information</b></h2></ion-label><br/>
+       <ion-label align="center"><h2 ><b>Name:</b></h2></ion-label>
+        <ion-label align="center"><h2 >{{direccion.name}} {{direccion.last_name}}</h2></ion-label>
+        <ion-label><h2 align="center"><b>Phone:</b></h2></ion-label>
+        <ion-label><h2 align="center">{{direccion.phone}}</h2></ion-label>
+<br/>
+     </div>
+     <div id="socialicons2" *ngFor="let paquete of paquetes">
+      <div class="socialicon2" (click)="ubicacion(paquete.id_a, paquete.state,paquete.id_p)">
+       <div class="linkedincolor socialiconcircle1"></div>
+    <div class="socialiconcircle2">
+     <ion-img class="img" src="assets/icon/placeholder.png"></ion-img>
+     </div> 
+     </div>
+ 
+     <div class="socialicon2" (click)="entrega(paquete.id_a, paquete.id_p)">
+     <div class="youtubecolor socialiconcircle1"></div>
+      <div class="socialiconcircle2">
+         <ion-img class="img" src="assets/icon/speech-bubble-1.png"></ion-img>
+ </div> 
+ </div>
+ 
+    
+ 
+       </div>
+ 
+    
+   
+
+</ion-content>

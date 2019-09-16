@@ -1,0 +1,60 @@
+<ion-header>
+    <ion-toolbar  color="dark">
+      <ion-title color="light">Trouble </ion-title>
+        <ion-button slot="end" color="dark" (click)="closetmMap()">
+            <ion-icon name="close" color="primary"></ion-icon>
+          </ion-button>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content padding>
+    <div id="socialicons">
+    <div class="socialicon">
+        <div class="tumblrcolor socialiconcircle1"></div>
+        <div class="socialiconcircle2">
+            <ion-img class="img" src="assets/icon/003-package.png"></ion-img>
+        </div> 
+        </div>    
+        </div>
+        <div class="compania" >
+            <ion-label><h1 align="center"><b>What is the problem</b></h1></ion-label><br/>
+  
+         </div>
+         <div *ngFor="let direccion of direcciones">
+          <br/>
+          <ion-label><h2 align="center"><b>User information</b></h2></ion-label>
+          <ion-label><h2 >Name: {{direccion.name}} {{direccion.last_name}}</h2></ion-label>
+          <ion-label><h2 >Mobile: {{direccion.mobile}}</h2></ion-label>
+         
+          <br/>
+       </div>
+       <div class="compania" *ngFor="let paquete of paquetes">
+        <ion-label><h2 align="center"><b>Package Information</b></h2></ion-label>
+         <ion-label><h2 align="center">{{paquete. name}}Kg</h2></ion-label>
+     
+         <ion-label align="center"><h2 ><b>Descripcion</b></h2></ion-label>
+         <ion-label><h2 align="center" >{{paquete.descripcion}}</h2></ion-label>
+         <br/>
+         
+      <div>
+    </div>
+      <ion-label><h2 align="center"><b>Please fill out the form</b></h2></ion-label>
+      <ion-item>
+         
+        <ion-label> trouble</ion-label>
+        <ion-select [(ngModel)]="error" okText="Okay" cancelText="Dismiss">
+           
+          <ion-select-option value="customs">Customs</ion-select-option>
+          <ion-select-option value="location not found">location not found</ion-select-option>
+          <ion-select-option value="no one is found">no one is found</ion-select-option>
+          <ion-select-option value="Package Issues">Package Issues</ion-select-option>
+          <ion-select-option value="none of the above">none of the above</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+          <ion-textarea [(ngModel)]="descripcion" placeholder="description of the problem"></ion-textarea>
+        </ion-item>
+      <ion-button color="danger" (click)="subirerror(paquete.id)" expand="block"> SUBMIT</ion-button>
+    </div>
+  
+</ion-content>

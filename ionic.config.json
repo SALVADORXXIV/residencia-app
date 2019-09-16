@@ -1,0 +1,7 @@
+{
+  "name": "app-transportista-rl-jones",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
